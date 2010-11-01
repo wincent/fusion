@@ -29,10 +29,6 @@
 //! Private methods.
 @interface WOFPlugInManager ()
 
-//! @return An array of bundles found in the standard search locations.
-//! @see    #searchPaths
-- (NSArray *)plugInBundles;
-
 //! @return A stable, localization-independent identifying string for the host
 //!         application bundle, based on the CFBundleName value from the
 //!         application's Info.plist if available, and falling back to the
@@ -49,6 +45,13 @@
 //!         directory.
 - (NSArray *)searchPaths;
 
+//! Scans the default search paths for bundles.
+//!
+//! @see    #searchPaths
+- (void)findAllBundles;
+
+@property(readwrite, copy) NSArray *bundles;
+
 @end
 
 @implementation WOFPlugInManager
@@ -62,26 +65,6 @@
         OSAtomicCompareAndSwapPtrBarrier(nil, temp, (void *)&manager);
     }
     return manager;
-}
-
-- (NSArray *)plugInBundles
-{
-    NSMutableArray *bundles = [NSMutableArray array];
-    NSFileManager *manager = [NSFileManager defaultManager];
-    for (NSString *path in [self searchPaths])
-    {
-        NSArray *paths = [manager contentsOfDirectoryAtPath:path error:NULL];
-        if (paths)
-        {
-            for (NSString *path in paths)
-            {
-                NSBundle *bundle = [NSBundle bundleWithPath:path];
-                if (bundle)
-                    [bundles addObject:bundle];
-            }
-        }
-    }
-    return bundles;
 }
 
 - (NSString *)hostBundleName
@@ -105,10 +88,32 @@
     return [paths copy];
 }
 
+- (void)findAllBundles
+{
+    NSMutableArray *bundles = [NSMutableArray array];
+    NSFileManager *manager = [NSFileManager defaultManager];
+    for (NSString *path in [self searchPaths])
+    {
+        NSArray *paths = [manager contentsOfDirectoryAtPath:path error:NULL];
+        if (paths)
+        {
+            for (NSString *path in paths)
+            {
+                NSBundle *bundle = [NSBundle bundleWithPath:path];
+                if (bundle)
+                    [bundles addObject:bundle];
+            }
+        }
+    }
+    self.bundles = bundles;
+}
+
 - (WOFPlugIn *)plugInForIdentifier:(NSString *)anIdentifier
 {
     // TODO: implementation
     return nil;
 }
+
+@synthesize bundles;
 
 @end

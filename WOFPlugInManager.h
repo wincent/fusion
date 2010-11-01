@@ -30,11 +30,21 @@
 
 }
 
+#pragma mark Class methods
+
 //! @return The shared instance of the WOFPlugInManager class.
 + (WOFPlugInManager *)sharedManager;
+
+#pragma mark Instance methods
 
 //! @return The first found instance of a WOFPlugIn which matches the
 //!         identifier.
 - (WOFPlugIn *)plugInForIdentifier:(NSString *)anIdentifier;
+
+#pragma mark Properties
+
+//! An array of loadable (plug-in) bundles found in the standard search
+//! locations.
+@property(readonly,copy) NSArray *bundles;
 
 @end
