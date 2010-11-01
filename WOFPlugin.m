@@ -1,4 +1,4 @@
-// WOFPlugin.m
+// WOFPlugIn.m
 // Copyright 2010 Wincent Colaiuta. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
@@ -22,8 +22,8 @@
 // ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 // POSSIBILITY OF SUCH DAMAGE.
 
-#import "WOFPlugin.h"
+#import "WOFPlugIn.h"
 
-@implementation WOFPlugin
+@implementation WOFPlugIn
 
 @end

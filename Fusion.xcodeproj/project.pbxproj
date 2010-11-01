@@ -6,13 +6,27 @@
 	objectVersion = 45;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		BC81653C127F0D9500EA5851 /* Documentation */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = BC816545127F0DC100EA5851 /* Build configuration list for PBXAggregateTarget "Documentation" */;
+			buildPhases = (
+				BC81653B127F0D9500EA5851 /* Run Script (RunDoxygen.sh) */,
+			);
+			dependencies = (
+			);
+			name = Documentation;
+			productName = Documentation;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		8DC2EF530486A6940098B216 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C1666FE841158C02AAC07 /* InfoPlist.strings */; };
 		8DC2EF570486A6940098B216 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */; };
-		BCDC6141127EF1A0006A3BBA /* WOFPlugin.h in Headers */ = {isa = PBXBuildFile; fileRef = BCDC613F127EF1A0006A3BBA /* WOFPlugin.h */; };
-		BCDC6142127EF1A0006A3BBA /* WOFPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = BCDC6140127EF1A0006A3BBA /* WOFPlugin.m */; };
-		BCDC6145127EF1B0006A3BBA /* WOFPluginManager.h in Headers */ = {isa = PBXBuildFile; fileRef = BCDC6143127EF1B0006A3BBA /* WOFPluginManager.h */; };
-		BCDC6146127EF1B0006A3BBA /* WOFPluginManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BCDC6144127EF1B0006A3BBA /* WOFPluginManager.m */; };
+		BCDC6141127EF1A0006A3BBA /* WOFPlugIn.h in Headers */ = {isa = PBXBuildFile; fileRef = BCDC613F127EF1A0006A3BBA /* WOFPlugIn.h */; };
+		BCDC6142127EF1A0006A3BBA /* WOFPlugIn.m in Sources */ = {isa = PBXBuildFile; fileRef = BCDC6140127EF1A0006A3BBA /* WOFPlugIn.m */; };
+		BCDC6145127EF1B0006A3BBA /* WOFPlugInManager.h in Headers */ = {isa = PBXBuildFile; fileRef = BCDC6143127EF1B0006A3BBA /* WOFPlugInManager.h */; };
+		BCDC6146127EF1B0006A3BBA /* WOFPlugInManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BCDC6144127EF1B0006A3BBA /* WOFPlugInManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,10 +36,11 @@
 		1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		8DC2EF5A0486A6940098B216 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8DC2EF5B0486A6940098B216 /* Fusion.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Fusion.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		BCDC613F127EF1A0006A3BBA /* WOFPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WOFPlugin.h; sourceTree = "<group>"; };
-		BCDC6140127EF1A0006A3BBA /* WOFPlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WOFPlugin.m; sourceTree = "<group>"; };
-		BCDC6143127EF1B0006A3BBA /* WOFPluginManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WOFPluginManager.h; sourceTree = "<group>"; };
-		BCDC6144127EF1B0006A3BBA /* WOFPluginManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WOFPluginManager.m; sourceTree = "<group>"; };
+		BC816537127F0CBD00EA5851 /* Doxyfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Doxyfile; sourceTree = "<group>"; };
+		BCDC613F127EF1A0006A3BBA /* WOFPlugIn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WOFPlugIn.h; sourceTree = "<group>"; };
+		BCDC6140127EF1A0006A3BBA /* WOFPlugIn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WOFPlugIn.m; sourceTree = "<group>"; };
+		BCDC6143127EF1B0006A3BBA /* WOFPlugInManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WOFPlugInManager.h; sourceTree = "<group>"; };
+		BCDC6144127EF1B0006A3BBA /* WOFPlugInManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WOFPlugInManager.m; sourceTree = "<group>"; };
 		BCEA3F57127E139E00AF3789 /* buildtools */ = {isa = PBXFileReference; lastKnownFileType = folder; path = buildtools; sourceTree = "<group>"; };
 		BCEA3FE6127E13BA00AF3789 /* base-style.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "base-style.xcconfig"; path = "buildtools/base-style.xcconfig"; sourceTree = "<group>"; };
 		BCEA3FE7127E13BA00AF3789 /* debug-style.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "debug-style.xcconfig"; path = "buildtools/debug-style.xcconfig"; sourceTree = "<group>"; };
@@ -60,7 +75,7 @@
 				BCEA3F56127E138E00AF3789 /* Submodules */,
 				BCEA3F55127E138100AF3789 /* Configuration */,
 				08FB77AEFE84172EC02AAC07 /* Classes */,
-				32C88DFF0371C24200C91783 /* Other Sources */,
+				32C88DFF0371C24200C91783 /* Documentation */,
 				089C1665FE841158C02AAC07 /* Resources */,
 				0867D69AFE84028FC02AAC07 /* External Frameworks and Libraries */,
 				034768DFFF38A50411DB9C8B /* Products */,
@@ -89,10 +104,10 @@
 		08FB77AEFE84172EC02AAC07 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				BCDC613F127EF1A0006A3BBA /* WOFPlugin.h */,
-				BCDC6140127EF1A0006A3BBA /* WOFPlugin.m */,
-				BCDC6143127EF1B0006A3BBA /* WOFPluginManager.h */,
-				BCDC6144127EF1B0006A3BBA /* WOFPluginManager.m */,
+				BCDC613F127EF1A0006A3BBA /* WOFPlugIn.h */,
+				BCDC6140127EF1A0006A3BBA /* WOFPlugIn.m */,
+				BCDC6143127EF1B0006A3BBA /* WOFPlugInManager.h */,
+				BCDC6144127EF1B0006A3BBA /* WOFPlugInManager.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -115,11 +130,12 @@
 			name = "Other Frameworks";
 			sourceTree = "<group>";
 		};
-		32C88DFF0371C24200C91783 /* Other Sources */ = {
+		32C88DFF0371C24200C91783 /* Documentation */ = {
 			isa = PBXGroup;
 			children = (
+				BC816537127F0CBD00EA5851 /* Doxyfile */,
 			);
-			name = "Other Sources";
+			name = Documentation;
 			sourceTree = "<group>";
 		};
 		BCEA3F55127E138100AF3789 /* Configuration */ = {
@@ -148,8 +164,8 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BCDC6141127EF1A0006A3BBA /* WOFPlugin.h in Headers */,
-				BCDC6145127EF1B0006A3BBA /* WOFPluginManager.h in Headers */,
+				BCDC6141127EF1A0006A3BBA /* WOFPlugIn.h in Headers */,
+				BCDC6145127EF1B0006A3BBA /* WOFPlugInManager.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -196,6 +212,7 @@
 			projectRoot = "";
 			targets = (
 				8DC2EF4F0486A6940098B216 /* Fusion */,
+				BC81653C127F0D9500EA5851 /* Documentation */,
 			);
 		};
 /* End PBXProject section */
@@ -211,13 +228,30 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		BC81653B127F0D9500EA5851 /* Run Script (RunDoxygen.sh) */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script (RunDoxygen.sh)";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = ". \"$BUILDTOOLS_DIR/RunDoxygen.sh\"";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8DC2EF540486A6940098B216 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BCDC6142127EF1A0006A3BBA /* WOFPlugin.m in Sources */,
-				BCDC6146127EF1B0006A3BBA /* WOFPluginManager.m in Sources */,
+				BCDC6142127EF1A0006A3BBA /* WOFPlugIn.m in Sources */,
+				BCDC6146127EF1B0006A3BBA /* WOFPlugInManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,6 +301,27 @@
 			};
 			name = Release;
 		};
+		BC81653D127F0D9500EA5851 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				PRODUCT_NAME = Documentation;
+			};
+			name = Debug;
+		};
+		BC81653E127F0D9500EA5851 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				PRODUCT_NAME = Documentation;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -284,6 +339,15 @@
 			buildConfigurations = (
 				1DEB91B208733DA50010E9CD /* Debug */,
 				1DEB91B308733DA50010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BC816545127F0DC100EA5851 /* Build configuration list for PBXAggregateTarget "Documentation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BC81653D127F0D9500EA5851 /* Debug */,
+				BC81653E127F0D9500EA5851 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -1,4 +1,4 @@
-// WOFPluginManager.h
+// WOFPlugInManager.h
 // Copyright 2010 Wincent Colaiuta. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
@@ -24,8 +24,17 @@
 
 #import <Foundation/Foundation.h>
 
-@interface WOFPluginManager : NSObject {
+@class WOFPlugIn;
+
+@interface WOFPlugInManager : NSObject {
 
 }
+
+//! @return The shared instance of the WOFPlugInManager class.
++ (WOFPlugInManager *)sharedManager;
+
+//! @return The first found instance of a WOFPlugIn which matches the
+//!         identifier.
+- (WOFPlugIn *)plugInForIdentifier:(NSString *)anIdentifier;
 
 @end

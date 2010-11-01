@@ -1,4 +1,4 @@
-// WOFPluginManager.m
+// WOFPlugInManager.m
 // Copyright 2010 Wincent Colaiuta. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
@@ -22,8 +22,92 @@
 // ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 // POSSIBILITY OF SUCH DAMAGE.
 
-#import "WOFPluginManager.h"
+#import "WOFPlugInManager.h"
 
-@implementation WOFPluginManager
+#import <libkern/OSAtomic.h>
+
+//! Private methods.
+@interface WOFPlugInManager ()
+
+//! @return An array of bundles found in the standard search locations.
+//! @see    #searchPaths
+- (NSArray *)plugInBundles;
+
+//! @return A stable, localization-independent identifying string for the host
+//!         application bundle, based on the CFBundleName value from the
+//!         application's Info.plist if available, and falling back to the
+//!         running process name if not. This string is used as a subdirectory
+//!         when searching for plug-ins inside the "Application Support"
+//!         folders.
+- (NSString *)hostBundleName;
+
+//! @return An array of paths to be scanned when searching for plug-ins.
+//! @note   Paths are ordered by decreasing specifity; that is, the "PlugIns"
+//!         folder inside the host application bundle will appear before the
+//!         corresponding folder in the user's home directory, which in turn
+//!         will appear before the equivalent folder in the global "/Library/"
+//!         directory.
+- (NSArray *)searchPaths;
+
+@end
+
+@implementation WOFPlugInManager
+
++ (WOFPlugInManager *)sharedManager
+{
+    static WOFPlugInManager *manager = nil;
+    if (!manager)
+    {
+        WOFPlugInManager *temp = [[self alloc] init];
+        OSAtomicCompareAndSwapPtrBarrier(nil, temp, (void *)&manager);
+    }
+    return manager;
+}
+
+- (NSArray *)plugInBundles
+{
+    NSMutableArray *bundles = [NSMutableArray array];
+    NSFileManager *manager = [NSFileManager defaultManager];
+    for (NSString *path in [self searchPaths])
+    {
+        NSArray *paths = [manager contentsOfDirectoryAtPath:path error:NULL];
+        if (paths)
+        {
+            for (NSString *path in paths)
+            {
+                NSBundle *bundle = [NSBundle bundleWithPath:path];
+                if (bundle)
+                    [bundles addObject:bundle];
+            }
+        }
+    }
+    return bundles;
+}
+
+- (NSString *)hostBundleName
+{
+    NSString *name = [[[NSBundle mainBundle] infoDictionary] objectForKey:(NSString *)kCFBundleNameKey];
+    if (!name)
+        name = [[NSProcessInfo processInfo] processName];
+    return name;
+}
+
+- (NSArray *)searchPaths
+{
+    NSMutableArray *paths = [NSMutableArray arrayWithObject:[[NSBundle mainBundle] builtInPlugInsPath]];
+    for (NSString *path in NSSearchPathForDirectoriesInDomains(NSApplicationSupportDirectory, NSAllDomainsMask, YES))
+    {
+        path = [path stringByAppendingPathComponent:[self hostBundleName]];
+        path = [path stringByAppendingPathComponent:@"PlugIns"];
+        [paths addObject:path];
+    }
+    return [paths copy];
+}
+
+- (WOFPlugIn *)plugInForIdentifier:(NSString *)anIdentifier
+{
+    // TODO: implementation
+    return nil;
+}
 
 @end

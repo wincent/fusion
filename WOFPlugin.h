@@ -1,4 +1,4 @@
-// WOFPlugin.h
+// WOFPlugIn.h
 // Copyright 2010 Wincent Colaiuta. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
@@ -24,7 +24,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface WOFPlugin : NSObject {
+@interface WOFPlugIn : NSObject {
 
 }
 
