@@ -95,9 +95,10 @@
 - (NSArray *)searchPaths
 {
     NSMutableArray *paths = [NSMutableArray arrayWithObject:[[NSBundle mainBundle] builtInPlugInsPath]];
+    NSString *hostIdentifier = [self hostBundleName];
     for (NSString *path in NSSearchPathForDirectoriesInDomains(NSApplicationSupportDirectory, NSAllDomainsMask, YES))
     {
-        path = [path stringByAppendingPathComponent:[self hostBundleName]];
+        path = [path stringByAppendingPathComponent:hostIdentifier];
         path = [path stringByAppendingPathComponent:@"PlugIns"];
         [paths addObject:path];
     }
