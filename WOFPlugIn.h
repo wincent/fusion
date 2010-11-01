@@ -24,8 +24,12 @@
 
 #import <Foundation/Foundation.h>
 
-@interface WOFPlugIn : NSObject {
+@interface WOFPlugIn : NSBundle {
 
 }
+
+#pragma mark Creation
+
++ (WOFPlugIn *)plugInWithPath:(NSString *)aPath;
 
 @end

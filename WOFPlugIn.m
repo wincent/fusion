@@ -24,6 +24,18 @@
 
 #import "WOFPlugIn.h"
 
+//! Private.
+@interface WOFPlugIn ()
+
+@end
+
 @implementation WOFPlugIn
+
+#pragma mark Creation
+
++ (WOFPlugIn *)plugInWithPath:(NSString *)aPath
+{
+    return [[self alloc] initWithPath:aPath];
+}
 
 @end

@@ -24,9 +24,11 @@
 
 #import "WOFPlugInManager.h"
 
+#import "WOFPlugIn.h"
+
 #import <libkern/OSAtomic.h>
 
-//! Private methods.
+//! Private methods, properties and property re-declarations.
 @interface WOFPlugInManager ()
 
 //! @return A stable, localization-independent identifying string for the host
@@ -45,12 +47,12 @@
 //!         directory.
 - (NSArray *)searchPaths;
 
-//! Scans the default search paths for bundles.
+//! Scans the default search paths for plug-ins.
 //!
 //! @see    #searchPaths
-- (void)findAllBundles;
+- (void)findAllPlugIns;
 
-@property(readwrite, copy) NSArray *bundles;
+@property(readwrite, copy) NSArray *plugIns;
 
 @end
 
@@ -89,9 +91,9 @@
     return [paths copy];
 }
 
-- (void)findAllBundles
+- (void)findAllPlugIns
 {
-    NSMutableArray *bundles = [NSMutableArray array];
+    NSMutableArray *plugIns = [NSMutableArray array];
     NSFileManager *manager = [NSFileManager defaultManager];
     for (NSString *path in [self searchPaths])
     {
@@ -100,13 +102,13 @@
         {
             for (NSString *path in paths)
             {
-                NSBundle *bundle = [NSBundle bundleWithPath:path];
-                if (bundle)
-                    [bundles addObject:bundle];
+                WOFPlugIn *plugIn = [WOFPlugIn plugInWithPath:path];
+                if (plugIn)
+                    [plugIns addObject:plugIn];
             }
         }
     }
-    self.bundles = bundles;
+    self.plugIns = plugIns;
 }
 
 - (WOFPlugIn *)plugInForIdentifier:(NSString *)anIdentifier
@@ -115,6 +117,12 @@
     return nil;
 }
 
-@synthesize bundles;
+- (WOFPlugIn *)plugInForClass:(Class)aClass
+{
+    // TODO: implementation
+    return nil;
+}
+
+@synthesize plugIns;
 
 @end

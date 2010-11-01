@@ -43,8 +43,8 @@
 
 #pragma mark Properties
 
-//! An array of loadable (plug-in) bundles found in the standard search
-//! locations.
-@property(readonly,copy) NSArray *bundles;
+//! An array of WOFPlugIn instances corresponding to the bundles found in the
+//! standard search locations.
+@property(readonly,copy) NSArray *plugIns;
 
 @end
