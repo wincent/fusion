@@ -22,7 +22,11 @@
 // ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 // POSSIBILITY OF SUCH DAMAGE.
 
+// class header
 #import "WOFPlugIn.h"
+
+// WOPublic headers
+#import "WOPublic/WOConvenienceMacros.h"
 
 //! Private.
 @interface WOFPlugIn ()
@@ -39,3 +43,7 @@
 }
 
 @end
+
+#pragma mark Info.plist keys
+
+WO_EXPORT NSString *WOFPlugInDependencies = @"WOFPlugInDependencies";

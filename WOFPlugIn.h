@@ -33,3 +33,7 @@
 + (WOFPlugIn *)plugInWithPath:(NSString *)aPath;
 
 @end
+
+#pragma mark Info.plist keys
+
+extern NSString *WOFPlugInDependencies;
