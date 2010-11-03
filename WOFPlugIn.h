@@ -32,8 +32,13 @@
 
 + (WOFPlugIn *)plugInWithPath:(NSString *)aPath;
 
+#pragma mark Properties
+
+@property(readonly) NSArray *dependencies;
+
 @end
 
 #pragma mark Info.plist keys
 
+//! Array of plug-in dependencies.
 extern NSString *WOFPlugInDependencies;

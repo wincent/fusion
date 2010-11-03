@@ -31,6 +31,8 @@
 //! Private.
 @interface WOFPlugIn ()
 
+@property(readwrite) NSArray *dependencies;
+
 @end
 
 @implementation WOFPlugIn
@@ -41,6 +43,20 @@
 {
     return [[self alloc] initWithPath:aPath];
 }
+
+- (id)initWithPath:(NSString *)path
+{
+    if ((self = [super initWithPath:path]))
+    {
+        NSDictionary *info = [self infoDictionary];
+        self.dependencies = [info objectForKey:WOFPlugInDependencies];
+    }
+    return self;
+}
+
+#pragma mark Properties
+
+@synthesize dependencies;
 
 @end
 
