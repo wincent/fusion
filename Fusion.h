@@ -22,5 +22,16 @@
 // ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 // POSSIBILITY OF SUCH DAMAGE.
 
+//! @file Fusion.h
+//!
+//! Fusion is an extremely thin, lightweight platform for building Objective-C
+//! applications using a "pure plug-in" architecture (that is, applications
+//! which are built entirely out of plug-ins).
+//!
+//! Mac OS X already provides a rich set of APIs for loading code dynamically at
+//! runtime. Fusion builds on these, specifically the NSBundle API, providing a
+//! simple means of declaring dependencies among plug-ins and discovering and
+//! loading plug-ins at runtime.
+
 #import "WOFPlugIn.h"
 #import "WOFPlugInManager.h"
