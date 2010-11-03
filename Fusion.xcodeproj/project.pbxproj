@@ -23,6 +23,7 @@
 /* Begin PBXBuildFile section */
 		8DC2EF530486A6940098B216 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C1666FE841158C02AAC07 /* InfoPlist.strings */; };
 		8DC2EF570486A6940098B216 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */; };
+		BC062BD51281FA03007BDE49 /* Fusion.h in Headers */ = {isa = PBXBuildFile; fileRef = BC062BD41281FA03007BDE49 /* Fusion.h */; };
 		BCDC6141127EF1A0006A3BBA /* WOFPlugIn.h in Headers */ = {isa = PBXBuildFile; fileRef = BCDC613F127EF1A0006A3BBA /* WOFPlugIn.h */; };
 		BCDC6142127EF1A0006A3BBA /* WOFPlugIn.m in Sources */ = {isa = PBXBuildFile; fileRef = BCDC6140127EF1A0006A3BBA /* WOFPlugIn.m */; };
 		BCDC6145127EF1B0006A3BBA /* WOFPlugInManager.h in Headers */ = {isa = PBXBuildFile; fileRef = BCDC6143127EF1B0006A3BBA /* WOFPlugInManager.h */; };
@@ -37,6 +38,7 @@
 		8DC2EF5A0486A6940098B216 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8DC2EF5B0486A6940098B216 /* Fusion.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Fusion.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC062B171280CF4E007BDE49 /* WOPublic */ = {isa = PBXFileReference; lastKnownFileType = folder; path = WOPublic; sourceTree = "<group>"; };
+		BC062BD41281FA03007BDE49 /* Fusion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Fusion.h; sourceTree = "<group>"; };
 		BC816537127F0CBD00EA5851 /* Doxyfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Doxyfile; sourceTree = "<group>"; };
 		BCDC613F127EF1A0006A3BBA /* WOFPlugIn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WOFPlugIn.h; sourceTree = "<group>"; };
 		BCDC6140127EF1A0006A3BBA /* WOFPlugIn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WOFPlugIn.m; sourceTree = "<group>"; };
@@ -75,6 +77,7 @@
 			children = (
 				BCEA3F56127E138E00AF3789 /* Submodules */,
 				BCEA3F55127E138100AF3789 /* Configuration */,
+				BC062BD31281F9B4007BDE49 /* Headers */,
 				08FB77AEFE84172EC02AAC07 /* Classes */,
 				32C88DFF0371C24200C91783 /* Documentation */,
 				089C1665FE841158C02AAC07 /* Resources */,
@@ -139,6 +142,14 @@
 			name = Documentation;
 			sourceTree = "<group>";
 		};
+		BC062BD31281F9B4007BDE49 /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				BC062BD41281FA03007BDE49 /* Fusion.h */,
+			);
+			name = Headers;
+			sourceTree = "<group>";
+		};
 		BCEA3F55127E138100AF3789 /* Configuration */ = {
 			isa = PBXGroup;
 			children = (
@@ -168,6 +179,7 @@
 			files = (
 				BCDC6141127EF1A0006A3BBA /* WOFPlugIn.h in Headers */,
 				BCDC6145127EF1B0006A3BBA /* WOFPlugInManager.h in Headers */,
+				BC062BD51281FA03007BDE49 /* Fusion.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
