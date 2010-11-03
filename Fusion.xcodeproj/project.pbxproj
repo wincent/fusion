@@ -36,6 +36,7 @@
 		1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		8DC2EF5A0486A6940098B216 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8DC2EF5B0486A6940098B216 /* Fusion.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Fusion.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC062B171280CF4E007BDE49 /* WOPublic */ = {isa = PBXFileReference; lastKnownFileType = folder; path = WOPublic; sourceTree = "<group>"; };
 		BC816537127F0CBD00EA5851 /* Doxyfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Doxyfile; sourceTree = "<group>"; };
 		BCDC613F127EF1A0006A3BBA /* WOFPlugIn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WOFPlugIn.h; sourceTree = "<group>"; };
 		BCDC6140127EF1A0006A3BBA /* WOFPlugIn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WOFPlugIn.m; sourceTree = "<group>"; };
@@ -152,6 +153,7 @@
 		BCEA3F56127E138E00AF3789 /* Submodules */ = {
 			isa = PBXGroup;
 			children = (
+				BC062B171280CF4E007BDE49 /* WOPublic */,
 				BCEA3F57127E139E00AF3789 /* buildtools */,
 			);
 			name = Submodules;
