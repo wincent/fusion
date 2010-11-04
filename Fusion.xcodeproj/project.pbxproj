@@ -23,10 +23,10 @@
 /* Begin PBXBuildFile section */
 		8DC2EF530486A6940098B216 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C1666FE841158C02AAC07 /* InfoPlist.strings */; };
 		8DC2EF570486A6940098B216 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */; };
-		BC062BD51281FA03007BDE49 /* Fusion.h in Headers */ = {isa = PBXBuildFile; fileRef = BC062BD41281FA03007BDE49 /* Fusion.h */; };
-		BCDC6141127EF1A0006A3BBA /* WOFPlugIn.h in Headers */ = {isa = PBXBuildFile; fileRef = BCDC613F127EF1A0006A3BBA /* WOFPlugIn.h */; };
+		BC062BD51281FA03007BDE49 /* Fusion.h in Headers */ = {isa = PBXBuildFile; fileRef = BC062BD41281FA03007BDE49 /* Fusion.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BCDC6141127EF1A0006A3BBA /* WOFPlugIn.h in Headers */ = {isa = PBXBuildFile; fileRef = BCDC613F127EF1A0006A3BBA /* WOFPlugIn.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BCDC6142127EF1A0006A3BBA /* WOFPlugIn.m in Sources */ = {isa = PBXBuildFile; fileRef = BCDC6140127EF1A0006A3BBA /* WOFPlugIn.m */; };
-		BCDC6145127EF1B0006A3BBA /* WOFPlugInManager.h in Headers */ = {isa = PBXBuildFile; fileRef = BCDC6143127EF1B0006A3BBA /* WOFPlugInManager.h */; };
+		BCDC6145127EF1B0006A3BBA /* WOFPlugInManager.h in Headers */ = {isa = PBXBuildFile; fileRef = BCDC6143127EF1B0006A3BBA /* WOFPlugInManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BCDC6146127EF1B0006A3BBA /* WOFPlugInManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BCDC6144127EF1B0006A3BBA /* WOFPlugInManager.m */; };
 /* End PBXBuildFile section */
 
