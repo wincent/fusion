@@ -39,6 +39,7 @@
 		BC062B171280CF4E007BDE49 /* WOPublic */ = {isa = PBXFileReference; lastKnownFileType = folder; path = WOPublic; sourceTree = "<group>"; };
 		BC062BD41281FA03007BDE49 /* Fusion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Fusion.h; sourceTree = "<group>"; };
 		BC062FBF128354CA007BDE49 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		BC06314A128355A6007BDE49 /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
 		BC816537127F0CBD00EA5851 /* Doxyfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Doxyfile; sourceTree = "<group>"; };
 		BCDC613F127EF1A0006A3BBA /* WOFPlugIn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WOFPlugIn.h; sourceTree = "<group>"; };
 		BCDC6140127EF1A0006A3BBA /* WOFPlugIn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WOFPlugIn.m; sourceTree = "<group>"; };
@@ -137,6 +138,7 @@
 		32C88DFF0371C24200C91783 /* Documentation */ = {
 			isa = PBXGroup;
 			children = (
+				BC06314A128355A6007BDE49 /* LICENSE.txt */,
 				BC816537127F0CBD00EA5851 /* Doxyfile */,
 			);
 			name = Documentation;
