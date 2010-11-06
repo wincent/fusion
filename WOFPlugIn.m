@@ -31,6 +31,7 @@
 //! Private.
 @interface WOFPlugIn ()
 
+@property(readwrite) id <NSObject, WOFPlugInProtocol> instance;
 @property(readwrite) NSArray *dependencies;
 
 @end
@@ -54,8 +55,18 @@
     return self;
 }
 
+#pragma mark Lifecycle
+
+- (void)instantiate
+{
+    self.instance = [[[self principalClass] alloc] init];
+    if ([self.instance respondsToSelector:@selector(activate)])
+        [self.instance activate];
+}
+
 #pragma mark Properties
 
+@synthesize instance;
 @synthesize dependencies;
 
 @end

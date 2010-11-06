@@ -118,6 +118,18 @@
     self.plugIns = plugIns;
 }
 
+- (NSError *)loadAllPlugIns
+{
+    for (WOFPlugIn *plugIn in self.plugIns)
+    {
+        NSError *error;
+        if (![plugIn loadAndReturnError:&error])
+            return error;
+        [plugIn instantiate];
+    }
+    return nil;
+}
+
 - (WOFPlugIn *)plugInForIdentifier:(NSString *)anIdentifier
 {
     // TODO: implementation

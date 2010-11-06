@@ -37,6 +37,16 @@
 
 #pragma mark Instance methods
 
+//! Loads all plug-ins which are eligible for loading (that is, all plug-ins
+//! whose dependencies are available)
+//!
+//! @return An NSError object containing information about the first failure
+//!         encountered during loading
+//! @return nil if no errors occurred
+//! @note   In the event of an error this method aborts further processing and
+//!         returns the associated NSError object immediately
+- (NSError *)loadAllPlugIns;
+
 //! @return The first found instance of a WOFPlugIn which matches the
 //!         identifier.
 - (WOFPlugIn *)plugInForIdentifier:(NSString *)anIdentifier;

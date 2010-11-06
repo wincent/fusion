@@ -24,6 +24,8 @@
 
 #import <Foundation/Foundation.h>
 
+#import "WOFPlugInProtocol.h"
+
 @interface WOFPlugIn : NSBundle {
 
 }
@@ -32,7 +34,19 @@
 
 + (WOFPlugIn *)plugInWithPath:(NSString *)aPath;
 
+#pragma mark Lifecycle
+
+- (void)instantiate;
+
 #pragma mark Properties
+
+//! An instance of the receiver's principal class.
+//!
+//! For loaded, instantiated plug-ins this will be an instance of the principal
+//! class obtained via alloc and init.
+//!
+//! For unloaded or not-yet-loaded plug-ins it will be nil.
+@property(readonly) id <NSObject, WOFPlugInProtocol> instance;
 
 @property(readonly) NSArray *dependencies;
 
