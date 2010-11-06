@@ -1,4 +1,4 @@
-// Fusion.h
+// WOFPlugInProtocol.h
 // Copyright 2010 Wincent Colaiuta. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
@@ -22,17 +22,17 @@
 // ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 // POSSIBILITY OF SUCH DAMAGE.
 
-//! @file Fusion.h
-//!
-//! Fusion is an extremely thin, lightweight platform for building Objective-C
-//! applications using a "pure plug-in" architecture (that is, applications
-//! which are built entirely out of plug-ins).
-//!
-//! Mac OS X already provides a rich set of APIs for loading code dynamically at
-//! runtime. Fusion builds on these, specifically the NSBundle API, providing a
-//! simple means of declaring dependencies among plug-ins and discovering and
-//! loading plug-ins at runtime.
+//! An optional set of methods that the principal class of a plug-in may
+//! implement
+@protocol WOFPlugInProtocol
 
-#import "WOFPlugIn.h"
-#import "WOFPlugInManager.h"
-#import "WOFPlugInProtocol.h"
+@optional
+
+//! Sent immediately after instantiation, and again upon re-activation
+//! (if the plug-in has been deactivated).
+//!
+//! Once-only initialization should be placed in the init method, but set-up
+//! which needs to be performed on each activation should occur in this method.
+- (void)activate;
+
+@end
