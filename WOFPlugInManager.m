@@ -69,6 +69,13 @@
     return manager;
 }
 
+- (id)init
+{
+    if ((self = [super init]))
+        [self findAllPlugIns];
+    return self;
+}
+
 - (NSString *)hostBundleName
 {
     NSString *name = [[[NSBundle mainBundle] infoDictionary] objectForKey:(NSString *)kCFBundleNameKey];
