@@ -42,6 +42,7 @@
 		BC062FBF128354CA007BDE49 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		BC06314A128355A6007BDE49 /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
 		BC2480FC1285CE7100D91727 /* WOFPlugInProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WOFPlugInProtocol.h; sourceTree = "<group>"; };
+		BC7DE671128727970027C712 /* fusion-plugin-target.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "fusion-plugin-target.xcconfig"; sourceTree = "<group>"; };
 		BC816537127F0CBD00EA5851 /* Doxyfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Doxyfile; sourceTree = "<group>"; };
 		BCDC613F127EF1A0006A3BBA /* WOFPlugIn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WOFPlugIn.h; sourceTree = "<group>"; };
 		BCDC6140127EF1A0006A3BBA /* WOFPlugIn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WOFPlugIn.m; sourceTree = "<group>"; };
@@ -158,6 +159,7 @@
 		BCEA3F55127E138100AF3789 /* Configuration */ = {
 			isa = PBXGroup;
 			children = (
+				BC7DE671128727970027C712 /* fusion-plugin-target.xcconfig */,
 				BCEA3FE6127E13BA00AF3789 /* base-style.xcconfig */,
 				BCEA3FE7127E13BA00AF3789 /* debug-style.xcconfig */,
 				BCEA3FE8127E13BA00AF3789 /* framework-target.xcconfig */,
