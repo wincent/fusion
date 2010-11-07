@@ -230,10 +230,15 @@
 
     for (WOFPlugIn *plugIn in self.resolvedPlugIns)
     {
-        NSError *error;
-        if (![plugIn loadAndReturnError:&error])
-            return error;
-        [plugIn instantiate];
+        if (![plugIn isLoaded])
+        {
+            NSError *error;
+            if (![plugIn loadAndReturnError:&error])
+                return error;
+        }
+
+        if (![plugIn instance])
+            [plugIn instantiate];
     }
     return nil;
 }

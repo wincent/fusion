@@ -37,8 +37,11 @@
 
 #pragma mark Instance methods
 
-//! Loads all plug-ins which are eligible for loading (that is, all plug-ins
-//! whose dependencies are available)
+//! Loads and instantiates all plug-ins which are eligible for loading (that is,
+//! all plug-ins whose dependencies are available)
+//!
+//! "Instantiation" here means instantiating an instance of the plug-in's
+//! principal class and sending it an "activate" message, if it responds to it.
 //!
 //! @return An NSError object containing information about the first failure
 //!         encountered during loading
