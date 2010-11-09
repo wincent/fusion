@@ -248,12 +248,6 @@
     return [self.uniquePlugIns objectForKey:anIdentifier];
 }
 
-- (WOFPlugIn *)plugInForClass:(Class)aClass
-{
-    // TODO: implementation
-    return nil;
-}
-
 @synthesize plugIns;
 @synthesize uniquePlugIns;
 @synthesize resolvedPlugIns;
