@@ -222,7 +222,6 @@
         }
     }
     [resolved addObject:aPlugIn];
-    [unresolved removeObject:aPlugIn];
 }
 
 - (NSError *)loadAllPlugIns
