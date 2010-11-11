@@ -204,6 +204,8 @@
                             resolved:(NSMutableArray *)resolved
                           unresolved:(NSMutableSet *)unresolved
 {
+    if ([resolved containsObject:aPlugIn])
+        return;
     [unresolved addObject:aPlugIn];
     for (NSString *identifier in aPlugIn.dependencies)
     {
